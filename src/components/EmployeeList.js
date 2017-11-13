@@ -6,10 +6,14 @@ import _ from 'lodash';
 import ListItem from './ListItem';
 
 class EmployeeList extends Component {
+  constructor(){
+  super()
+
+
+  }
   componentWillMount(){
     this.props.employeeFetch();
-    this.createDataSource(this.props)
-
+     this.createDataSource(this.props)
 
   }
   componentWillReceiveProps(nextProps){
