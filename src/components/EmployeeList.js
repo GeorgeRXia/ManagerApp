@@ -6,18 +6,14 @@ import _ from 'lodash';
 import ListItem from './ListItem';
 
 class EmployeeList extends Component {
-  constructor(){
-  super()
 
-
-  }
   componentWillMount(){
     this.props.employeeFetch();
-     this.createDataSource(this.props)
+    this.createDataSource(this.props)
 
   }
   componentWillReceiveProps(nextProps){
-    //nextProps are the next set o props will be rendered with.
+    //nextProps are the next set of props will be rendered with.
 console.log(nextProps)
     //this.props is still the old set of props
     this.createDataSource(nextProps)
@@ -36,7 +32,7 @@ console.log(nextProps)
 
   }
   render(){
-
+    
     return(
       <ListView
         enableEmptySections
@@ -50,6 +46,7 @@ console.log(nextProps)
 }
 
 const mapStateToProps = (state) => {
+
   const employees = _.map(state.employees, (val,uid) => { return {...val, uid}
 });
 return{employees}
