@@ -14,7 +14,7 @@ class EmployeeList extends Component {
   }
   componentWillReceiveProps(nextProps){
     //nextProps are the next set of props will be rendered with.
-console.log(nextProps)
+    console.log(nextProps)
     //this.props is still the old set of props
     this.createDataSource(nextProps)
   }
@@ -32,7 +32,7 @@ console.log(nextProps)
 
   }
   render(){
-    
+
     return(
       <ListView
         enableEmptySections
